@@ -93,7 +93,7 @@ class MahasiswaController extends Controller
 
         Mahasiswa::where('id', $mahasiswa->id)->update($validateData);
 
-        return redirect()->route('mahasiswas.edit', ['mahasiswa', $mahasiswa->id])->with('message', "Update data {$validateData['name']} successful!");
+        return redirect()->route('mahasiswas.index', ['mahasiswa', $mahasiswa->id])->with('message', "Update data {$validateData['name']} successful!");
     }
 
     /**
