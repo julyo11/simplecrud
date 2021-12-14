@@ -19,10 +19,10 @@ class FileUploadController extends Controller
         ]);
 
         $extFile = $request->berkas->getClientOriginalExtension();
-        $namaFile = $request->nama . time() . "." . $extFile;
+        $namaFile = $request->nama . "." . $extFile;
 
-        $path = $request->berkas->move('image', $namaFile);
-        echo "Variabel path berisi: $path <br>";
+        // $path = $request->berkas->move('image', $namaFile);
+        // echo "Variabel path berisi: $path <br>";
 
         $pathBaru = asset('image/', $namaFile);
         echo "Gambar berhasil di upload ke <a href='$pathBaru'>$pathBaru</a> <br> <img src='$pathBaru'>";
